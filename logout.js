@@ -1,9 +1,16 @@
-function logout() {
-  localStorage.removeItem('authToken'); // Remove the authentication token
+// Mendapatkan elemen tombol logout berdasarkan id
+const logoutButton = document.getElementById("logout-btn");
 
-  // Make a request to the server to invalidate the token (if necessary)
-  // ...
+// Menambahkan event listener pada tombol logout
+logoutButton.addEventListener("click", function() {
+    // Menampilkan dialog konfirmasi untuk logout
+    const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
 
-  alert('Anda telah logout.');
-  window.location.href = 'login.html'; // Redirect to the login page
-}
+    // Jika pengguna mengonfirmasi logout
+    if (confirmLogout) {
+        console.log("Pengguna logout, mengalihkan ke index.html");  // Menampilkan log jika logout berhasil
+        window.location.href = "index.html";  // Mengarahkan pengguna ke index.html
+    } else {
+        console.log("Pengguna membatalkan logout");  // Menampilkan log jika pengguna membatalkan logout
+    }
+});
