@@ -1,13 +1,9 @@
 function logout() {
-    // Hapus sesi yang ada di sini jika menggunakan sesi penyimpanan
-    localStorage.removeItem('userSession'); // Ganti dengan sesi yang sesuai jika perlu
+  localStorage.removeItem('authToken'); // Remove the authentication token
 
-    // Tampilkan pesan logout
-    alert('Anda telah logout.');
+  // Make a request to the server to invalidate the token (if necessary)
+  // ...
 
-    // Arahkan pengguna kembali ke halaman index
-    window.location.href = 'index.html'; // Ganti dengan halaman index yang sesuai
-
-    // Tambahkan kode untuk menghapus semua item dari localStorage
-    localStorage.clear();
-  }
+  alert('Anda telah logout.');
+  window.location.href = 'login.html'; // Redirect to the login page
+}
