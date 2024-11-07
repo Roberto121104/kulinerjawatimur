@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4; /* Warna latar belakang cadangan jika gambar tidak tersedia */
-    background-image: url('path/to/your/image.jpg'); /* Ganti dengan path gambar Anda */
+    background-image: url('pemandagan2.jpeg'); /* Ganti dengan path gambar Anda */
     background-size: cover; /* Gambar akan menutupi seluruh halaman */
     background-position: center center; /* Menyelaraskan gambar ke tengah */
     background-repeat: no-repeat; /* Menghindari pengulangan gambar */
